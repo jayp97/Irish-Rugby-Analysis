@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>How has Ireland Changed? A data driven Visual Essay</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="simple_statistics.js"></script>
+
+    <script src="https://d3js.org/d3-color.v2.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
+    
+    <link rel="stylesheet" href="/styles/style.scss">
+
+</head>
+<body>
+    <h1>How has Ireland Changed? <i>A data driven Visual Essay</i> </h1>
+    <h2 class="name"></h2>
+    <h2 class="population"></h2>
+    <div class="spacer-1"></div>
+  <script>
+        
+    // var width = window.innerWidth,
+    //     height = window.innerHeight;
+
+    var width = 650,
+        height = 810;
+    
+    var svg = d3.select( "body" )
+          .append( "svg" )
+          .attr( "width", width )
+          .attr( "height", height );
+      
+    var projection = d3.geo.albers()
+        .center([0, 53.4])
+        .rotate([8.1, 0])
+        .parallels([50, 60])
+        .scale(11000)
+        .translate([width / 2, height / 2]);
+
+    var geoPath = d3.geo.path()
+        .projection(projection);
+
+
+        d3.csv("irish-counties-population.csv", function(data) {
+
+        function countiesPop () {
+            var CountyPopulations = {};
+            
+            for (var i = 0; i < data.length; i++) {
+                CountyPopulations[data[i].COUNTY] = {id: data[i].ID, 
+                                                     population: + data[i].POPULATION, 
+                                                     province: data[i].PROVINCE}
+            }
+            console.log(CountyPopulations);
+            return CountyPopulations; 
+        };
+
+        function whatPopulation(county){
+            let pos ; // Object position
+
+            for (var i = 0; i < data.length; i++){
+                if (data[i].COUNTY == county)
+                pos = i; 
+            }
+            return data[pos].POPULATION; 
+        }
+        
+
+        queue()
+        .defer(d3.json, "counties-topo.json")
+        .await(ready);
+      
+    function ready(error, counties){
+        
+        var breaks = ss.jenks(counties.objects.counties.geometries.map(function(d) { 
+            return whatPopulation(d.properties.NAME_TAG) / d.properties.AREA; 
+        }), 9);
+
+        breaks.shift(); // remove min value from breaks Array before applying to domain
+        breaks.pop(); // same for max
+
+           var colors = d3.schemeYlGn[9];
+
+        var jenks = d3.scale.threshold()
+            .domain(breaks)
+            .range(colors);
+
+
+         svg.append("g") 
+            .selectAll("path")
+            .data( topojson.feature(counties, counties.objects.counties).features)
+            .enter()
+            .append("path")
+            .attr( "d", geoPath )
+            .attr("class","county")
+            .attr( "fill", function(d){
+                return jenks(whatPopulation(d.properties.NAME_TAG) / d.properties.AREA);
+            })
+            .on("mouseover", function(d){
+                d3.select("body").select(".name").text('County: ' + d.properties.NAME_TAG);
+                d3.select("body").select(".population").text("Population: " + whatPopulation(d.properties.NAME_TAG));
+                d3.select(this).attr("class","county hover");
+            })
+            .on("mouseout", function(d){
+                d3.select("body").selectAll("h2").text("");
+                d3.select(this).attr("class","county");
+
+            });        
+    }
+} );
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background: whitesmoke;
+}
+h1, h2, h3 {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    /* font-family: "Helvetica Neue",helvetica,arial,sans-serif; */
+    font-family: "Spectral";
+    font-weight: 700;
+    font-size: 2em;
+    color: rgb(51, 51, 51); 
+}
+
+h2{
+    top: 60px; 
+    font-size: 1.2em;
+}
+
+
+
+h2.population{
+    top: 90px;   
+}
+
+svg{
+    /* background-color: hotpink; */
+    position: fixed;
+    right: 1px;
+    top: 10px;
+}
+
+.county {
+  /* stroke: #fff; */
+  stroke: black;
+} 
+
+.hover{
+    stroke: black; 
+    stroke-width: 4px; 
+}
+
+.spacer-1{
+    width: 500px;
+    height: 1000px;
+    background-color: hotpink;
+}

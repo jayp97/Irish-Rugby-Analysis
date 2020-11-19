@@ -1,0 +1,326 @@
+[
+ {
+   "ID": 1,
+   "COUNTY": "Dublin",
+   "POPULATION": "2140164",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 2,
+   "COUNTY": "Antrim",
+   "POPULATION": "618108",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 3,
+   "COUNTY": "Cork",
+   "POPULATION": "542868",
+   "PROVINCE": "Munster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 4,
+   "COUNTY": "Down",
+   "POPULATION": "531665",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 5,
+   "COUNTY": "Galway",
+   "POPULATION": "258058",
+   "PROVINCE": "Connacht",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 6,
+   "COUNTY": "Londonderry",
+   "POPULATION": "247132",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 7,
+   "COUNTY": "Kildare",
+   "POPULATION": "222504",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 8,
+   "COUNTY": "Meath",
+   "POPULATION": "195044",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 9,
+   "COUNTY": "Limerick",
+   "POPULATION": "194899",
+   "PROVINCE": "Munster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 10,
+   "COUNTY": "Tyrone",
+   "POPULATION": "179000",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 11,
+   "COUNTY": "Armagh",
+   "POPULATION": "174792",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 12,
+   "COUNTY": "Tipperary",
+   "POPULATION": "159553",
+   "PROVINCE": "Munster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 13,
+   "COUNTY": "Donegal",
+   "POPULATION": "159192",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 14,
+   "COUNTY": "Wexford",
+   "POPULATION": "149722",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 15,
+   "COUNTY": "Kerry",
+   "POPULATION": "147707",
+   "PROVINCE": "Munster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 16,
+   "COUNTY": "Wicklow",
+   "POPULATION": "142425",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 17,
+   "COUNTY": "Mayo",
+   "POPULATION": "130507",
+   "PROVINCE": "Connacht",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 18,
+   "COUNTY": "Louth",
+   "POPULATION": "128884",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 19,
+   "COUNTY": "Clare",
+   "POPULATION": "118817",
+   "PROVINCE": "Munster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 20,
+   "COUNTY": "Waterford",
+   "POPULATION": "116176",
+   "PROVINCE": "Munster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 21,
+   "COUNTY": "Kilkenny",
+   "POPULATION": "99232",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 22,
+   "COUNTY": "Westmeath",
+   "POPULATION": "88770",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 23,
+   "COUNTY": "Laois",
+   "POPULATION": "84697",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 24,
+   "COUNTY": "Offaly",
+   "POPULATION": "77961",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 25,
+   "COUNTY": "Cavan",
+   "POPULATION": "76176",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 26,
+   "COUNTY": "Sligo",
+   "POPULATION": "65535",
+   "PROVINCE": "Connacht",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 27,
+   "COUNTY": "Roscommon",
+   "POPULATION": "64544",
+   "PROVINCE": "Connacht",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 28,
+   "COUNTY": "Monaghan",
+   "POPULATION": "61386",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 29,
+   "COUNTY": "Fermanagh",
+   "POPULATION": "61170",
+   "PROVINCE": "Ulster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 30,
+   "COUNTY": "Carlow",
+   "POPULATION": "56932",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 31,
+   "COUNTY": "Longford",
+   "POPULATION": "40873",
+   "PROVINCE": "Leinster",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": 32,
+   "COUNTY": "Leitrim",
+   "POPULATION": "32044",
+   "PROVINCE": "Connacht",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": null,
+   "COUNTY": "",
+   "POPULATION": "",
+   "PROVINCE": "",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": null,
+   "COUNTY": "",
+   "POPULATION": "",
+   "PROVINCE": "",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": null,
+   "COUNTY": "",
+   "POPULATION": "",
+   "PROVINCE": "",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ },
+ {
+   "ID": null,
+   "COUNTY": "",
+   "POPULATION": "",
+   "PROVINCE": "",
+   "FIELD5": "",
+   "FIELD6": "",
+   "FIELD7": ""
+ }
+]
