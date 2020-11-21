@@ -12,7 +12,7 @@ rawName = csv.reader(open('raw/raw-player-data-towns.csv','r'))
 
 with open('raw/raw-player-data-counties.csv', 'w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(["No.", "Player", "Position", "Debut", "Raw-Birth-Data","BirthPlace", "County"])
+    writer.writerow(["No.","Player","Position","Debut","Raw-Birth-Data","BirthPlace","County"])
     
     for row in rawName:
 
@@ -40,7 +40,7 @@ with open('raw/raw-player-data-counties.csv', 'w', newline='') as file:
 
                     if ritown[0].lower() == row[5].lower(): 
                         print(ritown[0])
-                        writer.writerow([row[0],row[1],row[2],row[3],row[4],row[5],ritown[2]])
+                        writer.writerow([row[0],row[1],row[2],row[3],row[4],row[5],ritown[2].strip()])
                         skip = True
             
             if skip == False: 
@@ -48,7 +48,7 @@ with open('raw/raw-player-data-counties.csv', 'w', newline='') as file:
 
                     if nitown[1].lower() == row[5].lower(): 
                         print(nitown[1])
-                        writer.writerow([row[0],row[1],row[2],row[3],row[4],row[5],nitown[4]])
+                        writer.writerow([row[0],row[1],row[2],row[3],row[4],row[5],nitown[4].strip()])
                         skip = True
 
             if skip == False: 
