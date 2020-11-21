@@ -1,33 +1,33 @@
-﻿county
-Antrim
-Armagh
-Carlow
-Cavan
-Clare
-Cork
-Derry
-Donegal
-Down
-Dublin
-Fermanagh
-Galway
-Kerry
-Kildare
-Kilkenny
-Laois
-Leitrim
-Limerick
-Longford
-Louth
-Mayo
-Meath
-Monaghan
-Offaly
-Roscommon
-Sligo
-Tipperary
-Tyrone
-Waterford
-Westmeath
-Wexford
-Wicklow
+﻿county,province,country
+Antrim,Ulster,Northern Ireland
+Armagh,Ulster,Northern Ireland
+Carlow,Leinster,Republic of Ireland
+Cavan,Ulster,Republic of Ireland
+Clare,Munster,Republic of Ireland
+Cork,Munster,Republic of Ireland
+Derry,Ulster,Northern Ireland
+Donegal,Ulster,Republic of Ireland
+Down,Ulster,Northern Ireland
+Dublin,Leinster,Republic of Ireland
+Fermanagh,Ulster,Northern Ireland
+Galway,Connaught,Republic of Ireland
+Kerry,Munster,Republic of Ireland
+Kildare,Leinster,Republic of Ireland
+Kilkenny,Leinster,Republic of Ireland
+Laois,Leinster,Republic of Ireland
+Leitrim,Connaught,Republic of Ireland
+Limerick,Munster,Republic of Ireland
+Longford,Leinster,Republic of Ireland
+Louth,Leinster,Republic of Ireland
+Mayo,Connaught,Republic of Ireland
+Meath,Leinster,Republic of Ireland
+Monaghan,Ulster,Republic of Ireland
+Offaly,Leinster,Republic of Ireland
+Roscommon,Connaught,Republic of Ireland
+Sligo,Connaught,Republic of Ireland
+Tipperary,Munster,Republic of Ireland
+Tyrone,Ulster,Northern Ireland,Republic of Ireland
+Waterford,Munster,Republic of Ireland
+Westmeath,Leinster,Republic of Ireland
+Wexford,Leinster,Republic of Ireland
+Wicklow,Leinster,Republic of Ireland
