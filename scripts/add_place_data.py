@@ -7,6 +7,7 @@ import csv
 # Now that I have the column of raw player data I need to extract the place data from it. 
 # Essentially where is the player from, town/village/city, county, Province, Country, Provided all this data is available. 
 
+
 rawName = csv.reader(open('raw/raw-player-data.csv','r'))
 countyList = []
 
