@@ -181,9 +181,6 @@ December 25, 1856, Dublin
    ",Dublin,Dublin,Leinster
 61,Jack Keon,Fwd,"v England The Oval, 24 Mar 1879","Born
 March 31, 1850, Portloman, Westmeath
-   ",Unknown,Meath,Leinster
-61,Jack Keon,Fwd,"v England The Oval, 24 Mar 1879","Born
-March 31, 1850, Portloman, Westmeath
    ",Unknown,Westmeath,Leinster
 62,William Pike,FB,"v England The Oval, 24 Mar 1879","Born
 March 10, 1860, Glendararry, Mayo
@@ -365,9 +362,6 @@ date unknown
 121,John McDaniel,W,"v Wales Cardiff, 12 Apr 1884","Born
 (guess: regd Q4), Newport
    ",Newport,Mayo,Connaught
-121,John McDaniel,W,"v Wales Cardiff, 12 Apr 1884","Born
-(guess: regd Q4), Newport
-   ",Newport,Tipperary,Munster
 122,Frederick Moore,Fwd,"v Wales Cardiff, 12 Apr 1884","Born
 September 3, 1857, Glasnevin, Dublin
    ",Dublin,Dublin,Leinster
@@ -617,9 +611,6 @@ June 24, 1871, Donnycarney, Dublin
 205,Coo Clinch,Fwd,"v Scotland Edinburgh, 20 Feb 1892","Born
 November 28, 1867, Dublin
    ",Dublin,Dublin,Leinster
-206,Frederick Davies,HB,"v Scotland Edinburgh, 20 Feb 1892","Born
-December 31, 1868, Rathdown, Dublin
-   ",Dublin,Down,Ulster
 206,Frederick Davies,HB,"v Scotland Edinburgh, 20 Feb 1892","Born
 December 31, 1868, Rathdown, Dublin
    ",Dublin,Dublin,Leinster
@@ -1255,9 +1246,6 @@ date unknown, ?
    ",Unknown,Unkown,Uknown
 417,Thomas Wallis,C,"v France Colombes, 9 Apr 1921","Born
 October 2, 1898, Rathdown, Dublin
-   ",Dublin,Down,Ulster
-417,Thomas Wallis,C,"v France Colombes, 9 Apr 1921","Born
-October 2, 1898, Rathdown, Dublin
    ",Dublin,Dublin,Leinster
 418,Samuel McVicker,L,"v England Lansdowne Road, 11 Feb 1922","Born
 December 12, 1890, Mosside, Co Antrim, Northern Ireland
@@ -1414,9 +1402,6 @@ July 10, 1907, Dublin
    ",Dublin,Dublin,Leinster
 469,Thomas Bramwell,H,"v France Belfast, 28 Jan 1928","Born
 January 15, 1901, Larne, Antrim
-   ",Trim,Antrim,Ulster
-469,Thomas Bramwell,H,"v France Belfast, 28 Jan 1928","Born
-January 15, 1901, Larne, Antrim
    ",Larne,Antrim,Ulster
 470,Reginald Odbert,C,"v France Belfast, 28 Jan 1928","Born
 February 9, 1904, Monkstown
@@ -1425,14 +1410,8 @@ February 9, 1904, Monkstown
 June 18, 1905, Belfast
    ",Belfast,Antrim,Ulster
 472,Jerry Mullane,F,"v Wales Cardiff, 10 Mar 1928","Born
-(guess: regd Q2), Newcastle West
-   ",Newcastle,Dublin,Leinster
-472,Jerry Mullane,F,"v Wales Cardiff, 10 Mar 1928","Born
-(guess: regd Q2), Newcastle West
-   ",Newcastle,Tipperary,Munster
-472,Jerry Mullane,F,"v Wales Cardiff, 10 Mar 1928","Born
-(guess: regd Q2), Newcastle West
-   ",Newcastle,Wicklow,Leinster
+(guess: regd Q2), Newcastle West, Limerick
+   ",Newcastle,Limerick,Munster
 473,Mike Dunne,L,"v France Colombes, 31 Dec 1928","Born
 July 14, 1906, Dublin
    ",Dublin,Dublin,Leinster
@@ -1759,9 +1738,6 @@ September 14, 1922, Arklow
    ",Arklow,Wicklow,Leinster
 582,Noel Henderson,C,"v Scotland Murrayfield, 26 Feb 1949","Born
 August 10, 1928, Drumahoe, Co Derry, Northern Ireland
-   ",Derry,Derry,Ulster
-582,Noel Henderson,C,"v Scotland Murrayfield, 26 Feb 1949","Born
-August 10, 1928, Drumahoe, Co Derry, Northern Ireland
    ",Drumahoe,Derry,Ulster
 583,John Burgess,SH,"v France Colombes, 28 Jan 1950","Born
 October 26, 1928, Tipperary
@@ -1910,9 +1886,6 @@ May 7, 1936, Dublin
 631,William Tector,FB,"v France Lansdowne Road, 22 Jan 1955","Born
 April 16, 1929, Clonroche, Co Wexford
    ",Clonroche,Wexford,Leinster
-631,William Tector,FB,"v France Lansdowne Road, 22 Jan 1955","Born
-April 16, 1929, Clonroche, Co Wexford
-   ",Wexford,Wexford,Leinster
 632,Mick Madden,L,"v England Lansdowne Road, 12 Feb 1955","Born
 November 24, 1929, Cork
    ",Cork,Cork,Munster
@@ -2081,9 +2054,6 @@ December 13, 1936, Co Laois
 687,Gerald Hardy,FH,"v Scotland Lansdowne Road, 24 Feb 1962","Born
 March 29, 1937, Omeath, Co Louth
    ",Omeath,Louth,Leinster
-687,Gerald Hardy,FH,"v Scotland Lansdowne Road, 24 Feb 1962","Born
-March 29, 1937, Omeath, Co Louth
-   ",Omeath,Meath,Leinster
 688,Noel Byrne,W,"v France Colombes, 14 Apr 1962","Born
 December 18, 1938, Curragh, Co Kildare
    ",Kildare,Kildare,Leinster
@@ -2128,9 +2098,6 @@ September 7, 1934, Parteen, Co Clare
    ",Parteen,Clare,Munster
 702,Mick Leahy,L,"v Wales Lansdowne Road, 7 Mar 1964","Born
 June 6, 1935, Woodford, Co Galway
-   ",Galway,Galway,Connaught
-702,Mick Leahy,L,"v Wales Lansdowne Road, 7 Mar 1964","Born
-June 6, 1935, Woodford, Co Galway
    ",Woodford,Galway,Connaught
 703,Al Moroney,P,"v Wales Lansdowne Road, 7 Mar 1964","Born
 July 27, 1941, Kilmihil, Co Clare
@@ -2147,9 +2114,6 @@ November 18, 1941, Co Antrim, Northern Ireland
 707,Sean MacHale,P,"v France Lansdowne Road, 23 Jan 1965","Born
 April 6, 1936, Ballina
    ",Ballina,Mayo,Connaught
-707,Sean MacHale,P,"v France Lansdowne Road, 23 Jan 1965","Born
-April 6, 1936, Ballina
-   ",Ballina,Tipperary,Munster
 708,Roger Young,SH,"v France Lansdowne Road, 23 Jan 1965","Born
 June 29, 1943, Belfast, Northern Ireland
    ",Belfast,Antrim,Ulster
@@ -2549,18 +2513,9 @@ circa 1957, ?
 840,Phil Danaher,FB,"v Scotland Lansdowne Road, 16 Jan 1988","Born
 October 5, 1965, Abbeyfeale, Limerick
    ",Abbeyfeale,Limerick,Munster
-840,Phil Danaher,FB,"v Scotland Lansdowne Road, 16 Jan 1988","Born
-October 5, 1965, Abbeyfeale, Limerick
-   ",Limerick,Limerick,Munster
 841,John Fitzgerald,P,"v Scotland Lansdowne Road, 16 Jan 1988","Born
 August 31, 1961, London
    ",Unknown,Unkown,Uknown
-842,Don Whittle,F,"v France Parc des Princes, 20 Feb 1988","Born
-November 16, 1960, Newtownards, Northern Ireland
-   ",Newtown,Laois,Leinster
-842,Don Whittle,F,"v France Parc des Princes, 20 Feb 1988","Born
-November 16, 1960, Newtownards, Northern Ireland
-   ",Newtown,Tipperary,Munster
 842,Don Whittle,F,"v France Parc des Princes, 20 Feb 1988","Born
 November 16, 1960, Newtownards, Northern Ireland
    ",Newtownards,Down,Ulster
@@ -2975,9 +2930,6 @@ September 25, 1978, Belfast, Northern Ireland
 980,Gavin Duffy,(FB),"v South Africa Cape Town, 19 Jun 2004","Born
 September 18, 1981, Ballina
    ",Ballina,Mayo,Connaught
-980,Gavin Duffy,(FB),"v South Africa Cape Town, 19 Jun 2004","Born
-September 18, 1981, Ballina
-   ",Ballina,Tipperary,Munster
 981,Johnny O'Connor,F,"v South Africa Lansdowne Road, 13 Nov 2004","Born
 February 9, 1980, Galway
    ",Galway,Galway,Connaught
