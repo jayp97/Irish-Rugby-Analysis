@@ -70,36 +70,78 @@ class RawPlayerData:
         return raw_born
 
 
+# ---------------------------------------------------------------------------------------------------------
+
+class PlayerCareerData:
+    def __init__(self, url):
+        self.url = url
+    
+    def careerData(self):
+
+        URL = self.url 
+        print(URL)
+        page = requests.get(URL)
+        careerList = []
+
+        soup = BeautifulSoup(page.content, 'html.parser')
+
+        results = soup.find("tr", class_ = 'data1')
+        print(results.prettify())
+
+        career_data = results.find_all('td')
+
+        print(len(career_data))
+
+        for career in career_data:
+            
+            # raw_born_parent = player.parent
+            # raw_born = raw_born_parent.text
+            
+            careerList.append(career.text)
+
+        careerList = careerList[1:-1]
+        print(careerList)
+        
+        return careerList
+
+
+
+
+
+
+
+# ---------------------------------------------------------------------------------------------------------
+
         # Does the text contain a county name if yes set county name = to county name
         # if no does text contain an irish/northern Irish city/towm/village name? If yes set city/town/village name property and then search internet/data table for the respective county of that city/town/village.  
 
 # ---------------------------------------------------------------------------------------------------------
 
 
-with open('raw/raw-player-data.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(["No.", "Player", "Position", "Debut", "Raw-Birth-Data"])
+# with open('raw/raw-player-data.csv', 'w', newline='') as file:
+#     writer = csv.writer(file)
+#     writer.writerow(["No.", "Player", "Position", "Debut", "Raw-Birth-Data"])
 
-    rawName = csv.reader(open('raw/raw-player-data-espn.csv','r'))
+#     rawName = csv.reader(open('raw/raw-player-data-espn.csv','r'))
 
-    for row in rawName:
-        # if row[1] == "Henry Walsh":
-        #     exit()
+#     for row in rawName:
+#         # if row[1] == "Henry Walsh":
+#         #     exit()
 
-        if row[1] == "Player":
-            pass 
+#         if row[1] == "Player":
+#             pass 
 
-        else:
-            playerName = row[1].strip()
-            print(playerName)
+#         else:
+#             playerName = row[1].strip()
+#             print(playerName)
 
-            urlPlayer = PlayerURL(playerName).findURL()
-            # print(urlPlayer)
+#             urlPlayer = PlayerURL(playerName).findURL()
+#             # print(urlPlayer)
 
-            rawData = RawPlayerData(urlPlayer).rawPlayerData()
-            print(rawData)
+#             rawData = RawPlayerData(urlPlayer).rawPlayerData()
+#             print(rawData)
 
-            writer.writerow([row[0], playerName, row[2].strip(), row[3].strip(), rawData])
+#             writer.writerow([row[0], playerName, row[2].strip(), row[3].strip(), rawData])
 
 
 
