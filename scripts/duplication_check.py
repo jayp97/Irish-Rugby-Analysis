@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re 
 import csv
 
-rawName = csv.reader(open('raw/raw-player-data-province.csv','r'))
+rawName = csv.reader(open('raw/raw-player-data-country.csv','r'))
 
 duplicates =[]
 current = str()

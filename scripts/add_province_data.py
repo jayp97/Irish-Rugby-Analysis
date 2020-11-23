@@ -20,7 +20,7 @@ with open('raw/raw-player-data-province.csv', 'w', newline='') as file:
             print('no')
 
         elif row[6] == "Unkown": 
-            writer.writerow([row[0],row[1],row[2],row[3],row[4],row[5],row[6],"Uknown"])
+            writer.writerow([row[0],row[1],row[2],row[3],row[4],row[5],row[6],"Unknown"])
 
         else: 
             for county in counties:
