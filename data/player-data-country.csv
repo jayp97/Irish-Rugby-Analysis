@@ -42,8 +42,8 @@ October 9, 1852, ?
 December 20, 1853, Newtonards, Down, Northern Ireland
    ",Newtonards,Down,Ulster,Northern Ireland
 15,Edward MacIlwaine,HB,"v England The Oval, 15 Feb 1875","Born
-April 9, 1873, Belfast
-   ",Belfast,Antrim,Ulster,Northern Ireland
+April 9, circa 1849, ?
+   ",Unknown,Unknown,Unknown,Unknown
 16,Robert Maginniss,Fwd,"v England The Oval, 15 Feb 1875","Born
 March 14, 1854, Newton-Saville, Tyrone, Northern Ireland
    ",Newton-Saville,Tyrone,Ulster,Northern Ireland
@@ -275,8 +275,8 @@ August 4, 1858, Monaghan, Northern Ireland
 92,John Buchanan,Fwd,"v Scotland Glasgow, 18 Feb 1882","Born
 April 26, 1863, Edenfel, Tyrone
    ",Edenfel,Tyrone,Ulster,Northern Ireland
-93,Robert Morrow,3Q,"v Scotland Glasgow, 18 Feb 1882","Born
-August 24, 1956, ?
+93,Robert Morrow,3Q,"v Scotland Glasgow, 18 Feb 1882","Born 
+date unknown, ?
    ",Unknown,Unkown,Unknown,Unknown
 94,Alexander O'Sullivan,Fwd,"v Scotland Glasgow, 18 Feb 1882","Born
 July 1, 1858, Cork
@@ -339,14 +339,14 @@ September 1865, Limerick
 December 9, 1864, Belfast
    ",Belfast,Antrim,Ulster,Northern Ireland
 114,William Collis,Fwd,"v Wales Cardiff, 12 Apr 1884","Born
-February 16, 1900, Killiney,Dún Laoghaire
-   ",Killiney,Dublin,Leinster,Republic of Ireland
+September 27, 1860, Dublin
+   ",Dublin,Dublin,Leinster,Republic of Ireland
 115,Herbert Cook,Fwd,"v Wales Cardiff, 12 Apr 1884","Born
 date unknown, ?
    ",Unknown,Unkown,Unknown,Unknown
 116,John Fitzgerald,Fwd,"v Wales Cardiff, 12 Apr 1884","Born
-August 31, 1961, London, England
-   ",London,Unkown,Unknown,England
+date unknown, ?
+   ",Unknown,Unkown,Unknown,Unknown
 117,William Hallaran,HB,"v Wales Cardiff, 12 Apr 1884","Born
 April 19, 1861,  Cahir, County Cork
    ",Cahir,Cork,Munster,Republic of Ireland
@@ -377,6 +377,9 @@ May 27, 1861, Gorey, Wexford
 126,Ernie Crawford,HB,"v England Manchester, 7 Feb 1885","Born
 January 26, 1861
    ",Unknown,Unkown,Unknown,Unknown
+127,Thomas Lyle,Fwd,"v England Manchester, 7 Feb 1885","Born
+August 26, 1860, Coleraine, Northern Ireland
+   ",Coleraine,Derry,Ulster, Northern Ireland
 128,Harry Neill,Fwd,"v England Manchester, 7 Feb 1885","Born
 December 12, 1860, Geelong, Australia
    ",Geelong,Unkown,Unknown,Australia
@@ -507,8 +510,8 @@ August 12, 1869, Belfast
 circa 1866, Letterkenny
    ",Letterkenny,Donegal,Ulster,Republic of Ireland
 171,James Stevenson,HB,"v NZ Natives Lansdowne Road, 1 Dec 1888","Born
-August 28, 1928, Belfast, Northern Ireland
-   ",Belfast,Antrim,Ulster,Northern Ireland
+December 4, 1868, Dungannon
+   ",Dungannon,Tyrone,Ulster,Northern Ireland
 172,David Woods,3Q,"v NZ Natives Lansdowne Road, 1 Dec 1888","Born
 April 1, 1868, ?
    ",Unknown,Unkown,Unknown,Unknown
@@ -687,8 +690,8 @@ April 9, 1873, Belfast
 September 26, 1871, Belfast
    ",Belfast,Antrim,Ulster,Northern Ireland
 231,Jack O'Connor,W,"v Scotland Edinburgh, 2 Mar 1895","Born
-date unknown, ?
-   ",Unknown,Unkown,Unknown,Unknown
+April 21, 1873, Limerick
+   ",Limerick,Limerick,Munster,Republic of Ireland
 232,Bill O'Sullivan,Fwd,"v Scotland Edinburgh, 2 Mar 1895","Born
 August 3, 1873, Batterfield, Co Kerry
    ",Batterfield,Kerry,Munster,Republic of Ireland
@@ -717,8 +720,8 @@ February 2, 1878, Belfast
 August 3, 1874, Belfast
    ",Belfast,Antrim,Ulster,Northern Ireland
 241,John Ryan,Fwd,"v England Lansdowne Road, 6 Feb 1897","Born
-August 2, 1988, Cork
-   ",Cork,Cork,Munster,Republic of Ireland
+date unknown, ?
+   ",Unknown,Unkown,Unknown,Unknown
 242,Michael Ryan,Fwd,"v England Lansdowne Road, 6 Feb 1897","Born
 circa 1871, ?
    ",Unknown,Unkown,Unknown,Unknown
@@ -753,8 +756,8 @@ date unknown, Blarney
 June 28, 1880, Monaghan
    ",Monaghan,Monaghan,Ulster,Republic of Ireland
 253,William Brown,W,"v England Lansdowne Road, 4 Feb 1899","Born
-August 19, 1943, Belfast, Northern Ireland
-   ",Belfast,Antrim,Ulster,Northern Ireland
+ date unknown, ?
+   ",Unknown,Unkown,Unknown,Unknown
 254,Ian Davidson,W,"v England Lansdowne Road, 4 Feb 1899","Born
 August 10, 1877, Ballyhackamore, Down
    ",Ballyhackamore,Down,Ulster,Northern Ireland
@@ -1200,7 +1203,7 @@ April 25, 1892, Glenbeigh, Co Kerry
 circa 1901, ?
    ",Unknown,Unkown,Unknown,Unknown
 402,Michael Bradley,P,"v Wales Cardiff, 13 Mar 1920","Born
-November 17, 1962, Cork
+October 16, 1897, Cork
    ",Cork,Cork,Munster,Republic of Ireland
 403,Bill Cunningham,FH,"v Wales Cardiff, 13 Mar 1920","Born
 March 27, 1900
@@ -1437,8 +1440,11 @@ December 12, 1908, Dorset, England
 December 18, 1905, Kilrea, Co Derry
    ",Kilrea,Derry,Ulster,Northern Ireland
 481,Noel Murphy,F,"v England Lansdowne Road, 8 Feb 1930","Born
-February 22, 1937, Cork
+December 27, 1904, Cork
    ",Cork,Cork,Munster,Republic of Ireland
+482,Henry O'Neill,P,"v England Lansdowne Road, 8 Feb 1930","Born
+July 1, 1907, Portstewart
+   ",Portstewart,Derry,Ulster,Northern Ireland
 483,Frederick Williamson,FB,"v England Lansdowne Road, 8 Feb 1930","Born
 January 25, 1905, Wexford
    ",Wexford,Wexford,Leinster,Republic of Ireland
@@ -1542,8 +1548,8 @@ August 24, 1910, Dublin
 November 18, 1906, Dunlavin, Co Wicklow
    ",Dunlavin,Wicklow,Leinster,Republic of Ireland
 517,Patrick Lawlor,F,"v England Twickenham, 9 Feb 1935","Born
-March 21, 1928, Dublin
-   ",Dublin,Dublin,Leinster,Republic of Ireland
+circa 1908, Dunlavin, Co Wicklow
+   ",Dunlavin,Wicklow,Leinster,Republic of Ireland
 518,Mike Sayers,F,"v England Twickenham, 9 Feb 1935","Born
 May 1, 1911, Madras, India
    ",Madras,Unkown,Unknown,India
@@ -1617,8 +1623,8 @@ March 10, 1915, ?
 September 19, 1914, Dublin
    ",Dublin,Dublin,Leinster,Republic of Ireland
 542,James Ryan,P,"v England Twickenham, 11 Feb 1939","Born
-July 24, 1996, Blackrock, Dublin
-   ",Blackrock,Dublin,Leinster,Republic of Ireland
+April 1, 1917, Dublin
+   ",Dublin,Dublin,Leinster,Republic of Ireland
 543,Charles Teehan,P,"v England Twickenham, 11 Feb 1939","Born
 May 6, 1919, Buttevant, Co Cork
    ",Buttevant,Cork,Munster,Republic of Ireland
@@ -1851,8 +1857,8 @@ May 13, 1926, Cork
 November 28, 1930, Cloughmills, Ballymena, Northern Ireland
    ",Cloughmills,Antrim,Ulster,Northern Ireland
 620,John Hewitt,FH,"v England Twickenham, 13 Feb 1954","Born
-November 21, 1960, Carrickfergus, Northern Ireland
-   ",Carrickfergus,Antrim,Ulster,Northern Ireland
+June 6, 1928, Belfast, Northern Ireland
+   ",Belfast,Antrim,Ulster,Northern Ireland
 621,James Murphy-O'Connor,N8,"v England Twickenham, 13 Feb 1954","Born
 June 6, 1925, Reading, England
    ",Reading,Unkown,Unknown,England
@@ -2196,7 +2202,7 @@ February 12, 1949, Dun Laoghaire, Dublin
 April 13, 1946, Belfast, Northern Ireland
    ",Belfast,Antrim,Ulster,Northern Ireland
 735,Denis Hickie,N8,"v France Lansdowne Road, 30 Jan 1971","Born
-February 13, 1976, Dublin
+April 12, 1943, Dublin
    ",Dublin,Dublin,Leinster,Republic of Ireland
 736,Sean Lynch,P,"v France Lansdowne Road, 30 Jan 1971","Born
 September 22, 1942, Dublin
@@ -2418,8 +2424,8 @@ June 28, 1960, Dublin
 November 24, 1955, Cork
    ",Cork,Cork,Munster,Republic of Ireland
 809,John Murphy,FB,"v South Africa Cape Town, 30 May 1981","Born
-February 8, 1963, Dublin
-   ",Dublin,Dublin,Leinster,Republic of Ireland
+August 27, 1957, Bray
+   ",Bray,Wicklow,Leinster,Republic of Ireland
 810,John Hewitt,(C),"v South Africa Cape Town, 30 May 1981","Born
 November 21, 1960, Carrickfergus, Northern Ireland
    ",Carrickfergus,Antrim,Ulster,Northern Ireland
@@ -2618,6 +2624,9 @@ April 2, 1965, Askeaton, Limerick
 875,Paul Hogan,F,"v France Parc des Princes, 21 Mar 1992","Born
 June 29, 1968, Limerick
    ",Limerick,Limerick,Munster,Republic of Ireland
+876,Derek McAleese,FH,"v France Parc des Princes, 21 Mar 1992","Born
+September 14, 1964, Limavady, Northern Ireland
+   ",Limavady,Derry,Ulster,Northern Ireland
 877,Ronald Carey,W,"v New Zealand Dunedin, 30 May 1992","Born
 August 6, 1965, Dungannon, Northern Ireland
    ",Dungannon,Tyrone,Ulster,Northern Ireland
@@ -2966,6 +2975,9 @@ March 4, 1979, Belfast, Northern Ireland
 992,Rory Best,(H),"v New Zealand Lansdowne Road, 12 Nov 2005","Born
 August 15, 1982, Craigavon, Northern Ireland
    ",Craigavon,Armagh,Ulster,Northern Ireland
+993,Andrew Trimble,C,"v Australia Lansdowne Road, 19 Nov 2005","Born
+October 20, 1984, Coleraine, Northern Ireland
+   ",Coleraine,Derry,Ulster,Northern Ireland
 994,Jerry Flannery,(H),"v Romania Lansdowne Road, 26 Nov 2005","Born
 October 17, 1978, Galway
    ",Galway,Galway,Connaught,Republic of Ireland

@@ -1,6 +1,6 @@
 import csv
 
-playerData = csv.reader(open('raw/player-data-country.csv','r'))
+playerData = csv.reader(open('data/player-data-country.csv','r'))
 # countyList = []
 
 with open('raw/player-data-debut.csv', 'w', newline='') as file: 
