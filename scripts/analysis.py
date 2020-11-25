@@ -19,9 +19,9 @@ class PlayersPerCounty:
             if playerData[str(i)]["birth place"]['county'] == self.county:
                 county_count += 1
 
-        return print(county_count)
+        return county_count
 
-PlayersPerCounty("Armagh").ppCounty()
+# PlayersPerCounty("Armagh").ppCounty()
 
         
 

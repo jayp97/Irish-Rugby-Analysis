@@ -17,7 +17,7 @@
 <body>
     <h1>How has Ireland Changed? <i>A data driven Visual Essay</i> </h1>
     <h2 class="name"></h2>
-    <h2 class="population"></h2>
+    <h2 class="total-players"></h2>
     <div class="spacer-1"></div>
   <script>
         
@@ -43,73 +43,63 @@
         .projection(projection);
 
 
-        d3.csv("irish-counties-population.csv", function(data) {
+        // d3.csv("irish-counties-population.csv", function(data) {
+    d3.csv("data/total-players-per-county.csv", function(data) {
+        console.log(typeof data[1].COUNTY);
 
-        function countiesPop () {
-            var CountyPopulations = {};
-            
+        function whatCounty(county) {
+            // console.log(county)
+            let pos; // Object position
+
             for (var i = 0; i < data.length; i++) {
-                CountyPopulations[data[i].COUNTY] = {id: data[i].ID, 
-                                                     population: + data[i].POPULATION, 
-                                                     province: data[i].PROVINCE}
-            }
-            console.log(CountyPopulations);
-            return CountyPopulations; 
-        };
-
-        function whatPopulation(county){
-            let pos ; // Object position
-
-            for (var i = 0; i < data.length; i++){
                 if (data[i].COUNTY == county)
-                pos = i; 
+                    pos = i;
             }
-            return data[pos].POPULATION; 
+            return data[pos].TOTAL;
         }
-        
 
         queue()
-        .defer(d3.json, "counties-topo.json")
-        .await(ready);
-      
-    function ready(error, counties){
-        
-        var breaks = ss.jenks(counties.objects.counties.geometries.map(function(d) { 
-            return whatPopulation(d.properties.NAME_TAG) / d.properties.AREA; 
-        }), 9);
+            .defer(d3.json, "counties-topo.json")
+            .await(ready);
 
-        breaks.shift(); // remove min value from breaks Array before applying to domain
-        breaks.pop(); // same for max
+        function ready(error, counties) {
 
-           var colors = d3.schemeYlGn[9];
+            var breaks = ss.jenks(counties.objects.counties.geometries.map(function(d) {
+                // return whatPopulation(d.properties.NAME_TAG) / d.properties.AREA; 
+                return whatCounty(d.properties.NAME_TAG)/1;
+            }), 9);
 
-        var jenks = d3.scale.threshold()
-            .domain(breaks)
-            .range(colors);
+            breaks.shift(); // remove min value from breaks Array before applying to domain
+            breaks.pop(); // same for max
+
+            var colors = d3.schemeYlGn[9];
+
+            var jenks = d3.scale.threshold()
+                .domain(breaks)
+                .range(colors);
 
 
-         svg.append("g") 
-            .selectAll("path")
-            .data( topojson.feature(counties, counties.objects.counties).features)
-            .enter()
-            .append("path")
-            .attr( "d", geoPath )
-            .attr("class","county")
-            .attr( "fill", function(d){
-                return jenks(whatPopulation(d.properties.NAME_TAG) / d.properties.AREA);
-            })
-            .on("mouseover", function(d){
-                d3.select("body").select(".name").text('County: ' + d.properties.NAME_TAG);
-                d3.select("body").select(".population").text("Population: " + whatPopulation(d.properties.NAME_TAG));
-                d3.select(this).attr("class","county hover");
-            })
-            .on("mouseout", function(d){
-                d3.select("body").selectAll("h2").text("");
-                d3.select(this).attr("class","county");
-
-            });        
-    }
-} );
+            svg.append("g")
+                .selectAll("path")
+                .data(topojson.feature(counties, counties.objects.counties).features)
+                .enter()
+                .append("path")
+                .attr("d", geoPath)
+                .attr("class", "county")
+                .attr("fill", function(d) {
+                    return jenks(whatCounty(d.properties.NAME_TAG)/1);
+                })
+                .on("mouseover", function(d) {
+                    d3.select("body").select(".name").text('County: ' + d.properties.NAME_TAG);
+                    d3.select("body").select(".total-players").text("Total Players: " + whatCounty(d.properties.NAME_TAG));
+                    d3.select(this).attr("class", "county hover");
+                })
+                .on("mouseout", function(d) {
+                    d3.select("body").selectAll("h2").text("");
+                    d3.select(this).attr("class", "county");
+                });
+        }
+    });
   </script>
 </body>
 </html>
