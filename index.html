@@ -11,18 +11,28 @@
     <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
     
-    <link rel="stylesheet" href="/styles/style.scss">
+    <link rel="stylesheet" href="/styles/style.css">
 
 </head>
 <body>
-    <h1>How has Ireland Changed? <i>A data driven Visual Essay</i> </h1>
-    <h2 class="name"></h2>
-    <h2 class="total-players"></h2>
-    <div class="spacer-1"></div>
+    <div class="main-content">
+        <h1 class="title"><i>A History of Irish Rugby</i> <br>Count(y)ing the Players </h1>
+        <div class="spacer-1"></div>
+        <p>Having read <a href="https://nba-origins.herokuapp.com">"Where are NBA Players from?"</a> by Sam Learner, a great interactive map that displays the history of the NBA with respect to its players (you should totally check it out), I was inspired to do a similar thing for Irish Rugby.</p>
+        <p>The map to the right plots the home counties of all Irish Rugby players who have ever existed by place of birth. Use the toggle and buttons below to change the 5-year period and the specific player metrics.</p>
+        <div id="sliderContainer">
+            <input id="timeslide" type="range" min="0" max="28" value="0" step="1"/><br>
+            <span id="range">1875-1880</span>
+        </div>
+    </div>
+        <h2 class="name"></h2>
+        <h2 class="total-players"></h2>
   <script>
         
     // var width = window.innerWidth,
     //     height = window.innerHeight;
+    let inputValue = null;
+    let  period = [[1875,1880], [1880,1885],[1885,1890], [1890,1895], [1895,1900], [1900,1905], [1905,1910], [1910,1915], [1915,1920], [1920,1925], [1925,1930], [1930,1935], [1935,1940], [1940,1945], [1945,1950], [1950,1955], [1955,1960], [1960,1965], [1965,1970], [1970,1975], [1975,1980], [1980,1985], [1985,1990], [1990,1995], [1995,2000], [2000,2005], [2005,2010], [2010,2015], [2015,2020]] ;
 
     var width = 650,
         height = 810;
@@ -100,6 +110,19 @@
                 });
         }
     });
+
+    d3.select("#timeslide").on("input", function() {
+    update(+this.value);
+    });
+
+    // update the fill of each SVG of class "incident" with value
+    function update(value) {
+        document.getElementById("range").innerHTML=   period[value][0] + " - " + period[value][1];
+        inputValue = period[value][0];
+        // d3.selectAll(".incident")
+        //     .attr("fill", dateMatch);
+        }
+
   </script>
 </body>
 </html>
