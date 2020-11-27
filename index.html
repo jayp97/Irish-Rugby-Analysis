@@ -21,8 +21,8 @@
         <p>Having read <a href="https://nba-origins.herokuapp.com">"Where are NBA Players from?"</a> by Sam Learner, a great interactive map that displays the history of the NBA with respect to its players (you should totally check it out), I was inspired to do a similar thing for Irish Rugby.</p>
         <p>The map to the right plots the home counties of all Irish Rugby players who have ever existed by place of birth. Use the toggle and buttons below to change the 5-year period and the specific player metrics.</p>
         <div id="sliderContainer">
-            <input id="timeslide" type="range" min="0" max="28" value="0" step="1"/><br>
-            <span id="range">1875-1880</span>
+            <input id="timeslide" type="range" min="0" max="28" value="28" step="1"/><br>
+            <span id="range">2015-2020</span>
         </div>
     </div>
         <h2 class="name"></h2>
@@ -31,8 +31,9 @@
         
     // var width = window.innerWidth,
     //     height = window.innerHeight;
-    let inputValue = null;
-    let  period = [[1875,1880], [1880,1885],[1885,1890], [1890,1895], [1895,1900], [1900,1905], [1905,1910], [1910,1915], [1915,1920], [1920,1925], [1925,1930], [1930,1935], [1935,1940], [1940,1945], [1945,1950], [1950,1955], [1955,1960], [1960,1965], [1965,1970], [1970,1975], [1975,1980], [1980,1985], [1985,1990], [1990,1995], [1995,2000], [2000,2005], [2005,2010], [2010,2015], [2015,2020]] ;
+    // rangeValue = null;
+    rangeValue = [2015,2020]; 
+    var  period = [[1875,1880], [1880,1885],[1885,1890], [1890,1895], [1895,1900], [1900,1905], [1905,1910], [1910,1915], [1915,1920], [1920,1925], [1925,1930], [1930,1935], [1935,1940], [1940,1945], [1945,1950], [1950,1955], [1955,1960], [1960,1965], [1965,1970], [1970,1975], [1975,1980], [1980,1985], [1985,1990], [1990,1995], [1995,2000], [2000,2005], [2005,2010], [2010,2015], [2015,2020]] ;
 
     var width = 650,
         height = 810;
@@ -54,19 +55,45 @@
 
 
         // d3.csv("irish-counties-population.csv", function(data) {
-    d3.csv("data/total-players-per-county.csv", function(data) {
-        console.log(typeof data[1].COUNTY);
+      data = d3.json("final-data/irish-player-data.json", function(data) {
+        console.log(data[0][1000]["birth_place"]["county"]);
 
-        function whatCounty(county) {
-            // console.log(county)
-            let pos; // Object position
+        // function whatCounty(county) {
+        //     // console.log(county)
+        //     let pos; // Object position
 
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].COUNTY == county)
-                    pos = i;
+        //     for (var i = 0; i < data.length; i++) {
+        //         if (data[i].COUNTY == county)
+        //             pos = i;
+        //     }
+        //     return data[pos].TOTAL;
+        // }
+
+        console.log(rangeValue)
+        
+        function playerCount(county, range) {
+            console.log(range)
+            let counter = 0
+            var dataCount = Object.keys(data[0]).length
+            for (var i = 1; i < dataCount+1; i++) {
+                // console.log(data[0][i]["birth_place"]["county"])
+                // console.log(dataCount)
+                // console.log(range)
+                // console.log((data[0][i]["debut year"] > range[0] && data[0][i]["debut year"] <= range[1]))
+                if (county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"] > range[0] && data[0][i]["debut year"] <= range[1])
+                    counter = counter + parseInt(data[0][i]["statistics"]["tries"]); 
+                    // counter++;  
+
+                if (range[0]==1875 && county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"]==1875)
+                    counter = counter + parseInt(data[0][i]["statistics"]["tries"]); 
+                    // counter++;   
             }
-            return data[pos].TOTAL;
+            console.log(counter)
+            // return counter;
+            return +Math.log2(counter+1);
         }
+
+
 
         queue()
             .defer(d3.json, "counties-topo.json")
@@ -76,13 +103,14 @@
 
             var breaks = ss.jenks(counties.objects.counties.geometries.map(function(d) {
                 // return whatPopulation(d.properties.NAME_TAG) / d.properties.AREA; 
-                return whatCounty(d.properties.NAME_TAG)/1;
-            }), 9);
+                // return whatCounty(d.properties.NAME_TAG)/1;
+                return playerCount(d.properties.NAME_TAG, rangeValue)/1;
+            }), 5);
 
             breaks.shift(); // remove min value from breaks Array before applying to domain
             breaks.pop(); // same for max
 
-            var colors = d3.schemeYlGn[9];
+            var colors = d3.schemeYlGn[5];
 
             var jenks = d3.scale.threshold()
                 .domain(breaks)
@@ -97,32 +125,41 @@
                 .attr("d", geoPath)
                 .attr("class", "county")
                 .attr("fill", function(d) {
-                    return jenks(whatCounty(d.properties.NAME_TAG)/1);
+                    // return jenks(whatCounty(d.properties.NAME_TAG)/1);
+                    console.log(playerCount(d.properties.NAME_TAG, rangeValue)/1)
+                    return jenks(playerCount(d.properties.NAME_TAG, rangeValue)/1);
                 })
                 .on("mouseover", function(d) {
                     d3.select("body").select(".name").text('County: ' + d.properties.NAME_TAG);
-                    d3.select("body").select(".total-players").text("Total Players: " + whatCounty(d.properties.NAME_TAG));
+                    d3.select("body").select(".total-players").text("Total Players: " + Math.round(Math.pow(2, playerCount(d.properties.NAME_TAG, rangeValue)) - 1));
                     d3.select(this).attr("class", "county hover");
                 })
                 .on("mouseout", function(d) {
                     d3.select("body").selectAll("h2").text("");
                     d3.select(this).attr("class", "county");
                 });
+
+
+            d3.select("#timeslide").on("input", function() {
+            update(+this.value);
+            });
+
+            // update the fill of each SVG of class "incident" with value
+            function update(value) {
+                document.getElementById("range").innerHTML= period[value][0] + " - " + period[value][1];
+                rangeValue = period[value];
+                console.log(rangeValue)
+                d3.selectAll(".county")
+                    .attr("fill", function(d) {
+                            // return jenks(whatCounty(d.properties.NAME_TAG)/1);
+                            console.log(playerCount(d.properties.NAME_TAG, rangeValue)/1)
+                            return jenks(playerCount(d.properties.NAME_TAG, rangeValue)/1);
+                        });
+            }
         }
     });
 
-    d3.select("#timeslide").on("input", function() {
-    update(+this.value);
-    });
-
-    // update the fill of each SVG of class "incident" with value
-    function update(value) {
-        document.getElementById("range").innerHTML=   period[value][0] + " - " + period[value][1];
-        inputValue = period[value][0];
-        // d3.selectAll(".incident")
-        //     .attr("fill", dateMatch);
-        }
-
+    
   </script>
 </body>
 </html>
