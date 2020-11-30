@@ -86,11 +86,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
-}
-
-.button-group-1 #player-debut:focus {
-  background-color: #78c679;
-  outline: none;
+  font-family: "Spectral";
+  font-weight: 500;
 }
 
 .button-group-1 #all-time {
@@ -98,11 +95,42 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border-top-left-radius: 0px;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+  font-family: "Spectral";
+  font-weight: 500;
 }
 
-.button-group-1 #all-time:focus {
+.active {
   background-color: #78c679;
   outline: none;
+}
+
+.active {
+  background-color: #78c679;
+  outline: none;
+}
+
+.button-group-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding-top: 20px;
+  padding-right: 15%;
+  padding-left: 15%;
+  justify-items: center;
+}
+
+.button-group-3 .bg3 {
+  font-family: "Spectral";
+  font-weight: 500;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  width: 8em;
+  height: 2em;
+  border-width: 1px;
+  margin-top: 5px;
 }
 
 body {
