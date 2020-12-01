@@ -1,0 +1,39 @@
+$font-family: "Spectral";
+$color: rgb(51, 51, 51); 
+$font-weight: 500;
+
+#myItemList{
+    position: fixed;
+    right: 30%;
+    top: 3%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: 24%;
+    width: 15%;
+    // background-color: red;
+    font-family: $font-family;
+    font-size: 13px;
+    font-weight: $font-weight;
+    color: $color;
+    text-transform: capitalize;
+    z-index: 1;
+
+    
+    #item-list-metric{
+        background-color: #fafecc;
+        text-align: center;
+        margin-top: -13px;
+    }
+    
+    #item-list-county{
+        background-color: #78c679;
+        text-align: center;
+        // margin-top: 10px;
+    }
+
+    #metric-list{
+        margin-top: -15px;
+        overflow: scroll;
+    }
+}

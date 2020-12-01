@@ -133,6 +133,44 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   margin-top: 5px;
 }
 
+#myItemList {
+  position: fixed;
+  right: 30%;
+  top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px;
+  height: 24%;
+  width: 15%;
+  font-family: "Spectral";
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+#myItemList #item-list-metric {
+  background-color: #fafecc;
+  text-align: center;
+  margin-top: -13px;
+}
+
+#myItemList #item-list-county {
+  background-color: #78c679;
+  text-align: center;
+}
+
+#myItemList #metric-list {
+  margin-top: -15px;
+  overflow: scroll;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -151,6 +189,10 @@ div.main-content {
   margin-left: 5%;
 }
 
+div.main-content p.extra-info {
+  margin-top: 25px;
+}
+
 h1, h2, h3 {
   /* font-family: "Helvetica Neue",helvetica,arial,sans-serif; */
   font-family: "Spectral";
@@ -162,6 +204,10 @@ h1, h2, h3 {
 h2 {
   top: 60px;
   font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
 }
 
 p {

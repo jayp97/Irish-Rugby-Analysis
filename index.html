@@ -19,7 +19,7 @@
         <h1 class="title"><i>A History of Irish Rugby</i> <br>Count(y)ing the Players </h1>
         <div class="spacer-1"></div>
         <p>Having read <a href="https://nba-origins.herokuapp.com">"Where are NBA Players from?"</a> by Sam Learner, a great interactive map that displays the history of the NBA with respect to its players (you should totally check it out), I was inspired to do a similar thing for Irish Rugby.</p>
-        <p>The map to the right plots the home counties of all Irish Rugby players who have ever existed by place of birth. Use the toggle and buttons below to change the 5-year period and the specific player metrics.</p>
+        <p>The map to the right plots the home counties of all Irish born Rugby players who have ever existed by place of birth. Use the toggle and buttons below to change the 5-year period and the specific player metrics.</p>
         <div id="sliderContainer">
             <input id="timeslide" type="range" min="0" max="28" value="28" step="1"/><br>
             <span id="range">2015-2020</span>
@@ -47,7 +47,7 @@
             <button class="bg3" id="matches" type="button" value="matches" title=" Include total number of matches each player has played">
                 Caps
              </button>
-             <button class= "bg3"  id="Starts" type="button" value="starts" title="Include total Number of Starts each player has had">
+             <button class= "bg3"  id="Starts" type="button" value="starts" title="Include total number of starts each player has had">
                  Starts
              </button>
              <button class="bg3" id="subs" type="button" value="substitutions" title=" Include total number of matches each player has come on as a substitution">
@@ -62,7 +62,7 @@
              <button class="bg3" id="convs" type="button" value="conversions" title=" Include total number of conversions each player has made">
                 Conversions
              </button>
-             <button class="bg3" id="pens" type="button" value="penalties" title=" Include total number of Pentalties each player has scored">
+             <button class="bg3" id="pens" type="button" value="penalties" title=" Include total number of pentalties each player has scored">
                 Penalties
              </button>
              <button class="bg3" id="drop-goal" type="button" value="drop goals" title=" Include total number of drop goals each player has scored">
@@ -77,13 +77,21 @@
              <button class="bg3" id="drawn" type="button" value="drawn" title=" Include total number of games each player has drawn">
                 Drawn
              </button>
-
         </div>
-
+        <p class="extra-info" style="font-size: 10px">
+           All players are filtered by PLACE OF BIRTH. Therefore some players where born in one county but lived most of their life in another. Take Rory Best as an example. He was born in County Armagh but grew up in County Down. Therefore, his data is bound to County Armagh not Down. <br> <br>
+           Some players, such as Ronan O'Gara, where born outside of Ireland and therefore their data is not associated with any county. <br> <br>
+           Finally, it was not possible to find place of birth data for several 100 players and therefore they have been excluded from the analysis. 
+        </p>
     </div>
-        <h2 class="name"></h2>
+    <div id="myItemList">
+        <h2 id="item-list-county"></h2>
+        <h3 id="item-list-metric"></h3>
+        <div id="metric-list"></div>
+    </div>
+        <!-- <h2 class="name"></h2>
         <h2 class="total-players"></h2>
-        <div class="tool-tip"></div>
+        <div class="tool-tip"></div> -->
   <script>
         
     // var width = window.innerWidth,
@@ -94,8 +102,6 @@
 
     buttonSetOne = "All Time"
     buttonSetThree = "players"
-
-    divisions = null
 
     var width = 650,
         height = 810;
@@ -126,11 +132,7 @@
 
             function ready(error, counties) {
 
-
                 let breaks = ss.jenks(counties.objects.counties.geometries.map(function(d) {
-                                // return whatPopulation(d.properties.NAME_TAG) / d.properties.AREA; 
-                                // return whatCounty(d.properties.NAME_TAG)/1;
-                                // console.log("inside breaks "+divs)
                                 return playerCount(d.properties.NAME_TAG, rangeValue)/1;
                             }), 9);
 
@@ -147,13 +149,8 @@
                 //     .domain(breaks)
                 //     .range(colors);
 
-                // Jenkers function should only be used for player debut button. 
-                
-
+                //////??????????? SHOULD THE GLOBAL VARIABLE FOR BUTTONSETONE CHANGE BEFORE THIS TO PLAYER DEBUT???
                 let breakers = ss.jenks(counties.objects.counties.geometries.map(function(d) {
-                    // return whatPopulation(d.properties.NAME_TAG) / d.properties.AREA; 
-                    // return whatCounty(d.properties.NAME_TAG)/1;
-                    // console.log("inside breaks "+divs)
                     return playerCount(d.properties.NAME_TAG, rangeValue)/1;
                 }),5);
 
@@ -168,35 +165,49 @@
                 
 
             function playerCount(county, range) {
+                let infoBox = []
                 let counter = 0
                 var dataCount = Object.keys(data[0]).length
-                // console.log(divisions)
                 for (var i = 1; i < dataCount+1; i++) {
 
-                    if (buttonSetOne == "Player Debut")
-                        if (county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"] > range[0] && data[0][i]["debut year"] <= range[1])
-                            if (buttonSetThree == "players")
-                                // counter = counter + parseInt(data[0][i]["statistics"]["tries"]); 
-                                counter++;  
-                            else
+                    if (buttonSetOne == "Player Debut") {
+                        if (county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"] > range[0] && data[0][i]["debut year"] <= range[1]) {
+                            if (buttonSetThree == "players") {
+                                counter++; 
+                            }
+                            else {
                                 counter = counter + parseInt(data[0][i]["statistics"][buttonSetThree]); 
-
-                        if (range[0]==1875 && county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"]==1875)
-                            if (buttonSetThree == "players")
-                                // counter = counter + parseInt(data[0][i]["statistics"]["tries"]); 
+                                infoBox.push([data[0][i]["name"], parseInt(data[0][i]["statistics"][buttonSetThree])]);
+                            }
+                        }
+                        if (range[0]==1875 && county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"]==1875) {
+                            if (buttonSetThree == "players") {
                                 counter++;  
-                            else
-                                 counter = counter + parseInt(data[0][i]["statistics"][buttonSetThree]);   
-
-                    else if (buttonSetOne == "All Time")
-                        if (county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"] >= period[0][0] && data[0][i]["debut year"] <= range[1])
-                            if (buttonSetThree == "players")
-                                // counter = counter + parseInt(data[0][i]["statistics"]["tries"]); 
-                                counter++;  
-                            else
-                                counter = counter + parseInt(data[0][i]["statistics"][buttonSetThree]);  
-
+                            }
+                            else {
+                                counter = counter + parseInt(data[0][i]["statistics"][buttonSetThree]); 
+                                infoBox.push([data[0][i]["name"], parseInt(data[0][i]["statistics"][buttonSetThree])]); 
+                            }
+                        }       
+                    }
+                    else if (buttonSetOne == "All Time") {
+                        if (county == data[0][i]["birth_place"]["county"] && data[0][i]["debut year"] >= period[0][0] && data[0][i]["debut year"] <= range[1]) {
+                            if (buttonSetThree == "players") {
+                                counter++;
+                            }  
+                            else {
+                                counter = counter + parseInt(data[0][i]["statistics"][buttonSetThree]); 
+                                infoBox.push([data[0][i]["name"], parseInt(data[0][i]["statistics"][buttonSetThree])]); 
+                            }
+                        }
+                    }
+                    
                 }
+
+                sortedInfoBox = infoBox.sort(function(a, b) {
+                        return b[1] - a[1];
+                    });
+                sortedInfoBoxFiltered = sortedInfoBox.filter( info => info[1] != 0);
                 // console.log(counter)
                 // return counter;
                 return +Math.log2(counter+1);
@@ -211,19 +222,38 @@
                 .attr("d", geoPath)
                 .attr("class", "county")
                 .attr("fill", function(d) {
-                    // return jenks(whatCounty(d.properties.NAME_TAG)/1);
                     console.log(playerCount(d.properties.NAME_TAG, rangeValue)/1)
                     return jenks(playerCount(d.properties.NAME_TAG, rangeValue)/1);
                 })
+                .on("click", function(d) {
+                    document.getElementById('metric-list').innerHTML = "";
+                    document.getElementById('item-list-metric').innerHTML = "";
+                    document.getElementById('item-list-county').innerHTML = "";
+
+                    document.getElementById('item-list-metric').innerHTML = buttonSetOne +":   " +buttonSetThree;
+
+                    console.log(d.properties.NAME_TAG)
+                    document.getElementById('item-list-county').innerHTML = d.properties.NAME_TAG;
+
+                    let items = sortedInfoBoxFiltered;
+
+                    ol = document.createElement('ol');
+                    document.getElementById('metric-list').appendChild(ol);
+
+                    items.forEach(function (item) {
+                        let li = document.createElement('li');
+                        ol.appendChild(li);
+
+                        li.innerHTML += item[0] + " = " + item[1];
+                    });
+                })
                 .on("mouseover", function(d) {
-                    // d3.select("body").select(".name").text('County: ' + d.properties.NAME_TAG);
-                    // d3.select("body").select(".total-players").text("Variable: " + Math.round(Math.pow(2, playerCount(d.properties.NAME_TAG, rangeValue)) - 1));
                     d3.select(this).attr("class", "county hover");
                     toolTip.style("visibility", "visible").text(d.properties.NAME_TAG);
                 })
                 .on("mousemove", d => toolTip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text(d.properties.NAME_TAG + ": " +buttonSetThree + " = " + Math.round(Math.pow(2, playerCount(d.properties.NAME_TAG, rangeValue)) - 1)))
                 .on("mouseout", function(d) {
-                    d3.select("body").selectAll("h2").text("");
+                    // d3.select("body").selectAll("h2").text("");
                     d3.select(this).attr("class", "county");
                     toolTip.style("visibility", "hidden");
                 });
@@ -252,8 +282,7 @@
                         });
             }
 
-            d3.select("#player-debut").on("click", function() {
-                // divisions = 5; 
+            d3.select("#player-debut").on("click", function() { 
                 buttonOneUpdate(this.value);
                 // console.log("divisions "+divisions)
                 // console.log(buttonSetOne);
@@ -292,12 +321,6 @@
                 
             })
 
-            // d3.select("#points").on("click", function() {
-            //     buttonThreeUpdate(this.value);
-            //     d3.select(this).attr("class", "bg3 active");
-            //     d3.select("#players").attr("class", "bg3");
-            // })
-
             function buttonThreeUpdate(value){
                 buttonSetThree = value;
                 d3.selectAll(".county")
@@ -321,11 +344,9 @@
                 .style("opacity",0.9)
                 .style("visibility", "hidden");
 
-
         }
     });
-
-    
+ 
   </script>
 </body>
 </html>

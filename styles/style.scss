@@ -2,6 +2,8 @@
 @import "./introduction";
 @import "./slider";
 @import "./button-groups"; 
+@import "./my-item-list";
+
 
 $font-family: "Spectral";
 $color: rgb(51, 51, 51); 
@@ -19,6 +21,11 @@ div.main-content{
     width: 45%;
     margin-left: 5%;
 
+    p.extra-info{
+        margin-top: 25px;
+        // background-color: red;
+    }
+
 }
 
 h1, h2, h3 {
@@ -32,6 +39,10 @@ h1, h2, h3 {
 h2{
     top: 60px; 
     font-size: 1.2em;
+}
+
+h3{
+    font-size: 1em;
 }
 
 p{
@@ -67,4 +78,6 @@ svg{
 //     height: 1000px;
 //     background-color: hotpink;
 // }
+
+
 
