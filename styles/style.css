@@ -31,7 +31,7 @@ p {
   -webkit-transform-origin: 0px 0px;
           transform-origin: 0px 0px;
   visibility: visible;
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   color: #333333;
   width: 50%;
 }
@@ -86,7 +86,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   font-weight: 500;
 }
 
@@ -95,7 +95,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border-top-left-radius: 0px;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   font-weight: 500;
 }
 
@@ -121,7 +121,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .button-group-3 .bg3 {
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   font-weight: 500;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -134,7 +134,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 #myItemList {
-  position: fixed;
+  position: absolute;
   right: 30%;
   top: 3%;
   display: -webkit-box;
@@ -147,7 +147,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   margin: 0px;
   height: 24%;
   width: 15%;
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   font-size: 13px;
   font-weight: 500;
   color: #333333;
@@ -169,6 +169,25 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 #myItemList #metric-list {
   margin-top: -15px;
   overflow: scroll;
+}
+
+div.outro {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 40%;
+}
+
+div.outro p {
+  font-size: 0.8em;
 }
 
 body {
@@ -195,7 +214,7 @@ div.main-content p.extra-info {
 
 h1, h2, h3 {
   /* font-family: "Helvetica Neue",helvetica,arial,sans-serif; */
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   font-weight: 700;
   font-size: 1.7em;
   color: #333333;
@@ -211,7 +230,7 @@ h3 {
 }
 
 p {
-  font-family: "Spectral";
+  font-family: "Spectral", serif;
   font-weight: 400;
   font-size: 0.9em;
 }
@@ -222,7 +241,7 @@ h2.total-players {
 
 svg {
   /* background-color: hotpink; */
-  position: fixed;
+  position: absolute;
   right: 1px;
   top: 10px;
 }
@@ -235,5 +254,33 @@ svg {
 .hover {
   stroke: black;
   stroke-width: 4px;
+}
+
+hr {
+  margin-top: 4em;
+  width: 40%;
+}
+
+.icon-img {
+  height: 13px;
+  width: 13px;
+  margin-bottom: -2px;
+}
+
+br.mini {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 2px;
+  line-height: 10px;
+}
+
+a {
+  color: #228443;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004e2c;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

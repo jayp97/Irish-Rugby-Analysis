@@ -3,9 +3,10 @@
 @import "./slider";
 @import "./button-groups"; 
 @import "./my-item-list";
+@import "./outro";
 
 
-$font-family: "Spectral";
+$font-family: "Spectral" , serif;
 $color: rgb(51, 51, 51); 
 
 body {
@@ -58,7 +59,8 @@ h2.total-players{
 
 svg{
     /* background-color: hotpink; */
-    position: fixed;
+    position: absolute;
+    // position: fixed;
     right: 1px;
     top: 10px;
 }
@@ -80,4 +82,33 @@ svg{
 // }
 
 
+hr{
+    margin-top: 4em;
+    width: 40%;
+}
 
+.icon-img {
+    height: 13px;
+    width: 13px;
+    margin-bottom: -2px;
+}
+
+br.mini {
+    display: block;
+    margin-bottom: 2px;
+    font-size:2px;
+    line-height: 10px;
+}
+
+a {
+    // color: #1E7EC8;
+    color: #228443; 
+    text-decoration: none; // changed from text-decoration:underline
+
+    &:hover{
+        color: #004e2c;
+        text-decoration: underline; // changed from text:decoration:none
+    }
+ }
+
+ 

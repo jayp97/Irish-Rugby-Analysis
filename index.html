@@ -11,6 +11,8 @@
     <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
     
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
 
 </head>
@@ -78,11 +80,29 @@
                 Drawn
              </button>
         </div>
-        <p class="extra-info" style="font-size: 10px">
+        <p class="extra-info" style="font-size: 11px">
            All players are filtered by PLACE OF BIRTH. Therefore some players where born in one county but lived most of their life in another. Take Rory Best as an example. He was born in County Armagh but grew up in County Down. Therefore, his data is bound to County Armagh not Down. <br> <br>
            Some players, such as Ronan O'Gara, where born outside of Ireland and therefore their data is not associated with any county. <br> <br>
            Finally, it was not possible to find place of birth data for several 100 players and therefore they have been excluded from the analysis. 
         </p>
+    </div>
+    <hr>
+    <div class="outro">
+
+        <p>
+            Visualisation by <a href="http://www.jaypinion.com">Jay Pinion</a> | <a href="mailto:jaypinion97@gmail.com"><img class="icon-img" src="/images/email.svg"></a> | <a href="https://twitter.com/JayPinion"><img class="icon-img" src="images/twitter.svg"></a> | <a href="https://github.com/jayp97"><img class="icon-img" src="images/github.png"></a> | <a href="https://www.instagram.com/jaypinion/"><img class="icon-img" src="images/instagram.svg">
+            <br class="mini"><br class="mini">
+            Code and data for this project lives <a href="https://github.com/jayp97/Irish-Rugby-Analysis">here</a>. 
+            <br class="mini"><br class="mini">
+            All Irish Rugby player data scraped from this <a href="http://en.espn.co.uk/scrum/rugby/player/caps.html?team=3"> ESPN Database</a>. The data used was data corresponding to all games before the 24th Novemeber 2020.
+            <br class="mini"><br class="mini">
+            <b>HTML</b>, <b>CSS</b>, <b>Javascript</b>, and <b>Python</b> were all used to create this interactive map. The <b>D3.js</b> Javascript library was used extensively for the data visualisation and mapping functionality. 
+            The python library <b>Beautiful Soup</b> was used to scrape the data from the ESPN website. 
+            Ireland counties GeoJson from <a href="https://www.townlands.ie/page/download/">townlands.ie</a>, simplified to TopoJSON using <a href="https://mapshaper.org/">mapshaper</a>.
+            <br class="mini"><br class="mini">
+            Last Updated: December 2020
+        </p>
+       
     </div>
     <div id="myItemList">
         <h2 id="item-list-county"></h2>
